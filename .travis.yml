@@ -1,5 +1,5 @@
 language: node_js
-node_js: "12"
+node_js: "14.15.3"
 branches:
   only:
     - main
@@ -9,4 +9,6 @@ cache:
 services:
   - mysql
 before_install:
-  - mysql -e 'CREATE DATABASE IF NOT EXISTS testdb;'
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS mknvh63jt0bx4odc'
+test:
+  - node test
