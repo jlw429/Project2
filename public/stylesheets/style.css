@@ -1,0 +1,74 @@
+/* Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+
+/* background image for index.html 
+.background-1{
+background-image: 
+url("../images/login-back.jpg");
+background-repeat: no-repeat;
+background-size: 100% 100vh;
+height: 100%;
+background-position: center;
+} */
+
+/* background image for login.html */
+.background-1::before {
+    content: "";
+    background-image: url(../images/login-back.jpg);
+    background-size: 100% 100vh;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+}
+
+/*background image for signup.html */
+.background-2::before {
+    content: "";
+    background-image: url(../images/signup.jpg);
+    background-size: 100% 100vh;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+}
+
+/*body and html styling */
+body, html{
+height: 100%;
+}
+
+/* Sign up here */
+.sign-here {
+font-size: 18px;
+font-family: 'Lobster', cursive;
+text-align: end;
+}
+
+/* sign up here word */
+.here-word {
+color: navy;
+}
+
+/* email and password words and boxes */
+.form-group {
+font-size: 18px;
+font-family: 'Lobster', cursive;
+}
+
+/* login button */
+.btn{
+/* font-family: cursive; */
+display: block;
+max-width: 300px;
+margin: auto;
+}
