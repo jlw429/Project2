@@ -1,5 +1,11 @@
+
 {
- 
+   "development": {
+    "username": "xyp3zsalf6aki88a",
+    "password": "njn9qo9egkmlx51q",
+    "database": "mknvh63jt0bx4odc",
+    "host": "pxukqohrckdfo4ty.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
