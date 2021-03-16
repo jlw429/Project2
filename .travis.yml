@@ -11,5 +11,5 @@ services:
   - mysql
 before_install:
   - mysql -e 'CREATE DATABASE IF NOT EXISTS mknvh63jt0bx4odc'
-# test:
-#   - node test
+test:
+  - npm test
