@@ -1,8 +1,8 @@
-drop database if exists attendance_db;  
+DROP DATABASE IF EXISTS mknvh63jt0bx4odc;
 
-CREATE DATABASE attendance_db; 
+CREATE DATABASE mknvh63jt0bx4odc;
 
-USE attendance_db; 
+USE mknvh63jt0bx4odc;
 
 CREATE TABLE Students ( 
 idStudents INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 

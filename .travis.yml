@@ -3,6 +3,7 @@ node_js:
  - "node"
 branches:
   only:
+    - master
     - main
 cache:
   directories:
@@ -11,5 +12,3 @@ services:
   - mysql
 before_install:
   - mysql -e 'CREATE DATABASE IF NOT EXISTS mknvh63jt0bx4odc'
-test:
-  - npm test
