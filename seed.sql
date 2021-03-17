@@ -1,4 +1,4 @@
-USE attendance_db;
+USE mknvh63jt0bx4odc;
 
 INSERT INTO teachers (lastName, firstName) VALUES ("Hawthorne", "Ingrid");
 INSERT INTO teachers (lastName, firstName) VALUES ("Parnell", "Gary");
@@ -9,7 +9,7 @@ INSERT INTO teachers (lastName, firstName) VALUES ("Tucci", "David");
 INSERT INTO teachers (lastName, firstName) VALUES ("Winters-Hurst", "Natosha"); 
 
 
-USE attendance_db;
+
 
 INSERT INTO Classes (className) VALUES ("Biology");
 INSERT INTO Classes (className) VALUES ("ELA");

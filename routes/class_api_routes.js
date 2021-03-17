@@ -34,6 +34,7 @@ module.exports = (app) => {
   app.get('/api/attendance/', (req, res) => {
     db.Att.findAll({}).then((attPost) => res.json(attPost));
   });
+  
   app.get('/api/attendance/:id', (req, res) => {
     db.Att.findOne({
       where: {

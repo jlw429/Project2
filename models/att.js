@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const Post = sequelize.define('Att', {
+  const Att = sequelize.define('Att', {
     period: {
       type: DataTypes.STRING,
       allowNull: false,
