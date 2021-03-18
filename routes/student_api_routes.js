@@ -33,7 +33,6 @@ module.exports = (app) => {
     db.Stu.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
-      address: req.body.address
     }).then((stuPost) => res.json(stuPost));
   });
 
