@@ -6,6 +6,7 @@ const isAuthenticated = require('../config/isAuthenticated.js');
 // Routes
 module.exports = (app) => {
   app.get('/', function (req, res) {
+    //passport---->
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect('/members');
@@ -27,13 +28,19 @@ module.exports = (app) => {
   app.get('/members', isAuthenticated, function (req, res) {
     res.sendFile(path.join(__dirname, '../public/members.html'));
   });
+  //<---------end of passport routes
 
-  //loads second page
+  //loads homepage
+  app.get('/home', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
+  });
+
+  //loads student page
   app.get('/students', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/student.html'));
   });
 
-  //loads third page
+  //loads attendance page
   app.get('/attendance', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/attendance.html'));
   });

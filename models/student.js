@@ -1,19 +1,23 @@
 module.exports = (sequelize, DataTypes) => {
   const Stu = sequelize.define('Stu', {
-    name: {
+    firstName: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1],
       },
     },
-    classroom: {
+    lastName: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1],
       },
     },
+    address: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    }
   });
   return Stu;
 };
