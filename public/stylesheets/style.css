@@ -120,3 +120,28 @@ margin: auto;
   text-decoration: none;
   font-size: 30px;
 }
+
+/* styling for logout text */
+.log-out{
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+/* background styling for logout.html */
+.background-4::before {
+  content: "";
+  background-image: url(../images/logout.jpg);
+  background-size: 100% 100vh;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+}
