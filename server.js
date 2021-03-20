@@ -2,7 +2,6 @@
 const express = require('express');
 const session = require('express-session');
 
-
 // Requiring passport as we've configured it
 const passport = require('./config/passport');
 
@@ -11,12 +10,13 @@ const PORT = process.env.PORT || 8080;
 const db = require('./models');
 
 //handlebars engine
+const app = express();
 const exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
-// Creating express app 
-const app = express();
+// Creating express app
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));

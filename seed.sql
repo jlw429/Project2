@@ -1,4 +1,5 @@
-USE attendance_db;
+
+USE mknvh63jt0bx4odc;
 
 INSERT INTO teachers (lastName, firstName) VALUES ("Hawthorne", "Ingrid");
 INSERT INTO teachers (lastName, firstName) VALUES ("Parnell", "Gary");
@@ -9,7 +10,7 @@ INSERT INTO teachers (lastName, firstName) VALUES ("Tucci", "David");
 INSERT INTO teachers (lastName, firstName) VALUES ("Winters-Hurst", "Natosha"); 
 
 
-USE attendance_db;
+USE mknvh63jt0bx4odc;
 
 INSERT INTO Classes (className, idClass) VALUES ("Biology", "310");
 INSERT INTO Classes (className, idClass) VALUES ("ELA", "456");
@@ -19,7 +20,7 @@ INSERT INTO Classes (className, idClass) VALUES ("Family Living & Mgmt", "560");
 INSERT INTO Classes (className, idClass) VALUES ("Algebra", "200");
 INSERT INTO Classes (className, idClass) VALUES ("Computer Technology", "101"); 
 
-USE attendance_db; 
+USE mknvh63jt0bx4odc;; 
 
 INSERT INTO Students (lastname, firstname) VALUES ("Allen", "Delaphonta");
 INSERT INTO Students (lastname, firstname) VALUES ("Bender", "Cortez");

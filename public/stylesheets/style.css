@@ -16,7 +16,7 @@ height: 100%;
 background-position: center;
 } */
 
-/* background image for login.html */
+/* background styling for login.html */
 .background-1::before {
     content: "";
     background-image: url(../images/login-back.jpg);
@@ -29,7 +29,7 @@ background-position: center;
     opacity: 0.75;
 }
 
-/*background image for signup.html */
+/*background styling for signup.html */
 .background-2::before {
     content: "";
     background-image: url(../images/signup.jpg);
@@ -39,7 +39,7 @@ background-position: center;
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.75;
+    opacity: 0.4;
 }
 
 /*body and html styling */
@@ -71,4 +71,119 @@ font-family: 'Lobster', cursive;
 display: block;
 max-width: 300px;
 margin: auto;
+}
+
+/* background styling for index.html */
+.background-3::before {
+  content: "";
+  background-image: url(../images/index.jpg);
+  background-size: 100% 100vh;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+}
+
+/*styling for welcome back text on index.html */
+.welcome-text {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  line-height: 750px;
+}
+
+/*styling for navbar words */
+.topnav-center {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* mobile formatting for navbar */
+@media screen and (max-width: 600px) {
+  .topnav-center {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
+
+/* styling for header in navbar */
+#color-me {
+  color: darkred;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+/* styling for logout text */
+.log-out{
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+/* background styling for logout.html */
+.background-4::before {
+  content: "";
+  background-image: url(../images/logout.jpg);
+  background-size: 100% 100vh;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+}
+
+/* background styling for student.html */
+.background-5::before {
+  content: "";
+  background-image: url(../images/student.jpg);
+  background-size: 100% 100vh;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.7;
+}
+
+/* styling for header in navbar in student.html */
+#color-me2 {
+  color: rgb(106, 131, 64);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+/* background styling for attendence.html */
+.background-6::before {
+  content: "";
+  background-image: url(../images/attendence.png);
+  background-size: 100% 100vh;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
+
+/* styling for header in navbar in attendence.html*/
+#color-me3 {
+  color: rgb(236, 171, 145);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
 }

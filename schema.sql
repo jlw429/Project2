@@ -1,3 +1,4 @@
+
 drop database if exists attendance_db;  
 
 CREATE DATABASE attendance_db; 
@@ -25,4 +26,3 @@ CREATE TABLE teachers(
 firstName VARCHAR(50), 
 lastName VARCHAR(50) 
 )
-;
