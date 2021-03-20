@@ -11,14 +11,15 @@ lastName VARCHAR(50)
 );
 
 CREATE TABLE Attendance (
-idAttendance INT NOT NULL, 
+idAttendance NOT NULL, 
 date DATE, 
 status VARCHAR(50), 
 tagCode VARCHAR(50)
 );
 
 CREATE TABLE Classes(
-className VARCHAR(50) 
+className VARCHAR(50),
+idClass INT(3) NOT NULL
 );
 CREATE TABLE teachers( 
 firstName VARCHAR(50), 
