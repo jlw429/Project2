@@ -1,8 +1,9 @@
-DROP DATABASE IF EXISTS mknvh63jt0bx4odc;
 
-CREATE DATABASE mknvh63jt0bx4odc;
+drop database if exists attendance_db;  
 
-USE mknvh63jt0bx4odc;
+CREATE DATABASE attendance_db; 
+
+USE attendance_db; 
 
 CREATE TABLE Students ( 
 idStudents INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
@@ -11,17 +12,17 @@ lastName VARCHAR(50)
 );
 
 CREATE TABLE Attendance (
-idAttendance INT NOT NULL, 
+idAttendance NOT NULL, 
 date DATE, 
 status VARCHAR(50), 
 tagCode VARCHAR(50)
 );
 
 CREATE TABLE Classes(
-className VARCHAR(50) 
+className VARCHAR(50),
+idClass INT(3) NOT NULL
 );
 CREATE TABLE teachers( 
 firstName VARCHAR(50), 
 lastName VARCHAR(50) 
 )
-;
