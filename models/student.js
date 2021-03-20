@@ -14,10 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         len: [1],
       },
     },
-    address: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    }
+    
   });
   return Stu;
 };
