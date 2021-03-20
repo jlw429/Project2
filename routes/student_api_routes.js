@@ -1,16 +1,15 @@
 // Requiring our Todo model
 const db = require('../models');
 
-
 module.exports = (app) => {
-  
   //Viewing all Students information(the student table)
   app.get('/api/student/', (req, res) => {
     db.Stu.findAll({}).then((stuPost) => {
       const hbsStudent = {
-        Stu: stuPost
-      }
-      res.render("student", hbsStudent);
+        Stu: stuPost,
+      };
+      res.render('student', hbsStudent);
+    });
   });
 
   // Get route for retrieving a single student
@@ -21,9 +20,9 @@ module.exports = (app) => {
       },
     }).then((stuPost) => {
       const hbsStudent = {
-        Stu: stuPost
-      }
-      res.render('student', hbsStudent)
+        Stu: stuPost,
+      };
+      res.render('student', hbsStudent);
     });
   });
 
@@ -53,14 +52,4 @@ module.exports = (app) => {
       },
     }).then((stuPost) => res.json(stuPost));
   });
-  // Get route for returning students in a certain classroom
-  // app.get('/api/student/:id', (req, res) => {
-  //   db.Stu.findAll({
-  //     where: {
-  //       classroom: req.params.classroom,
-  //     },
-  //   }).then((stuPost) => {
-  //     res.json(stuPost);
-  //   });
-  // });
 };
