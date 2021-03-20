@@ -39,7 +39,7 @@ background-position: center;
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.75;
+    opacity: 0.4;
 }
 
 /*body and html styling */
@@ -144,4 +144,46 @@ margin: auto;
   bottom: 0px;
   left: 0px;
   opacity: 0.5;
+}
+
+/* background styling for student.html */
+.background-5::before {
+  content: "";
+  background-image: url(../images/student.jpg);
+  background-size: 100% 100vh;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.7;
+}
+
+/* styling for header in navbar in student.html */
+#color-me2 {
+  color: rgb(106, 131, 64);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+/* background styling for attendence.html */
+.background-6::before {
+  content: "";
+  background-image: url(../images/attendence.png);
+  background-size: 100% 100vh;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
+
+/* styling for header in navbar in attendence.html*/
+#color-me3 {
+  color: rgb(236, 171, 145);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
 }
