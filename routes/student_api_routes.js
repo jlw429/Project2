@@ -27,11 +27,12 @@ module.exports = (app) => {
   });
 
   // POST route for saving a new student
-  app.post('/api/student/:new', (req, res) => {
+  app.post('/api/student/new', (req, res) => {
     console.log(req.body);
     db.Stu.create({
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
+      student_name: req.body.student_name,
+      teacher_main: req.body.teacher_main,
+      teacher_email: req.body.teacher_email,
     }).then((stuPost) => res.json(stuPost));
   });
 

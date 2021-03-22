@@ -8,7 +8,7 @@ module.exports = (app) => {
       const temp = {
         att: attPost
       }
-      res.render("index", temp);
+      res.render("attendance", temp);
       //res.json(attPost)
     });
   });
@@ -18,7 +18,11 @@ module.exports = (app) => {
       where: {
         id: req.params.id,
       },
-    }).then((attPost) => res.json(attPost));
+    }).then((attPost) => {
+      const getOne = {
+        att: attPost
+      }
+     res.render("attendance", getOne);
   });
 
 };
