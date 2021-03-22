@@ -38,7 +38,7 @@ require('./routes/passport_api_routes')(app);
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const msg = {
-  to: 'jasonlwest@gmail.com', // Change to your recipient
+  to: , // Change to your recipient
   from: 'jlw00329@gmail.com', // Change to your verified sender
   subject: 'Sending with SendGrid is Fun',
   text: 'and easy to do anywhere, even with Node.js',
