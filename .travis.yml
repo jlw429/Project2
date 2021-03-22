@@ -10,5 +10,9 @@ cache:
     - node_modules
 services:
   - mysql
+
+script:
+  - true
+  
 before_install:
   - mysql -e 'CREATE DATABASE IF NOT EXISTS mknvh63jt0bx4odc'
