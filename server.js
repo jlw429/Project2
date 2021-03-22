@@ -36,10 +36,7 @@ require('./routes/passport_api_routes')(app);
 
 //SendGrid Email
 
-sgMail.setApiKey(
-  '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'
-  // 'lYcjSIyvTcOYk9JhaOhFSQ.LeJZLwj2-bN-_U_bSlmD832g_oN5u6B6DxH70JA6noc'
-);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const msg = {
   to: 'jasonlwest@gmail.com', // Change to your recipient
   from: 'jlw00329@gmail.com', // Change to your verified sender
