@@ -55,5 +55,9 @@ sgMail.send(msg, (err, info) => {
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(() => {
-  app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
+  app.listen(PORT, () =>
+    console.log(
+      `"Listening on port 8080. Visit http://localhost:8080/ in your browser.", PORT, PORT)`
+    )
+  );
 });
