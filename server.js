@@ -1,7 +1,8 @@
 // Requiring necessary npm packages
 const express = require('express');
 const session = require('express-session');
-
+const sgMail = require('@sendgrid/mail');
+require('dotenv').config();
 
 // Requiring passport as we've configured it
 const passport = require('./config/passport');
@@ -36,9 +37,9 @@ require('./routes/passport_api_routes')(app);
 
 //SendGrid Email
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+sgMail.setApiKey(process.env.SENDGRID_KEY);
 const msg = {
-  to: , // Change to your recipient
+  to: 'jlw00329@gmail.com', // Change to your recipient
   from: 'jlw00329@gmail.com', // Change to your verified sender
   subject: 'Sending with SendGrid is Fun',
   text: 'and easy to do anywhere, even with Node.js',

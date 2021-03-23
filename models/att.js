@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const Att = sequelize.define('Att', {
+  const Attendance = sequelize.define('Attendance', {
     student_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
       validate: {
         len: [1],
       },
+    },
   });
-  return Att;
+  return Attendance;
 };
