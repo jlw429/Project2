@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 // Dependencies
 const path = require('path');
 //for passport
@@ -5,40 +7,46 @@ const isAuthenticated = require('../config/isAuthenticated.js');
 
 // Routes
 module.exports = (app) => {
-  app.get('/', function (req, res) {
-    //passport---->
-    // If the user already has an account send them to the members page
-    res.sendFile(path.join(__dirname, '../public/signup.html'));
+  app.get('/', (req, res) => {
+    res.render('index');
   });
 
-  app.get('/login', function (req, res) {
+  app.get('/signup', function (req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect('../public/index.html');
     }
-    res.sendFile(path.join(__dirname, '../public/login.html'));
+    res.render('signup');
   });
-
-  // Here we've add our isAuthenticated middleware to this route.
-  // If a user who is not logged in tries to access this route they will be redirected to the signup page
-
-  app.get('/index', isAuthenticated, function (req, res) {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
-  });
-  //<---------end of passport routes
 
   //loads homepage
-  app.get('/home', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
+  app.get('/welcome', (req, res) => {
+    res.render('welcome');
   });
 
   //loads student page
-  app.get('/students', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/student.html'));
+  app.get('/student', (req, res) => {
+    res.render('student');
   });
 
   //loads attendance page
   app.get('/attendance', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/attendance.html'));
+    fetch(`http://localhost:8080/api/attendance`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Success in getting posts:', data);
+        res.render('attendance', data);
+      })
+      .catch((error) => console.error('Error:', error));
+  });
+
+  //loads logout page
+  app.get('/logout', (req, res) => {
+    res.render('logout');
   });
 };
