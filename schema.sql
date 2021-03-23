@@ -4,14 +4,20 @@ CREATE DATABASE mknvh63jt0bx4odc;
 
 USE mknvh63jt0bx4odc;
 
-CREATE TABLE Students ( 
+CREATE TABLE user (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+email VARCHAR(25),
+password VARCHAR(25)
+);
+
+CREATE TABLE student ( 
 id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
 student_name VARCHAR(50),
 teacher_main VARCHAR(50),
 teacher_email VARCHAR(50)
 );
 
-CREATE TABLE Attendance (
+CREATE TABLE attendance (
 id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
 classNum INT,
 className VARCHAR(50),

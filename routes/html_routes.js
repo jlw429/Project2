@@ -8,9 +8,6 @@ module.exports = (app) => {
   app.get('/', function (req, res) {
     //passport---->
     // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect('../public/index.html');
-    }
     res.sendFile(path.join(__dirname, '../public/signup.html'));
   });
 
