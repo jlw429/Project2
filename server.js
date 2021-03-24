@@ -19,9 +19,9 @@ app.set('view engine', 'handlebars');
 
 // Creating express app
 
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(__dirname + '/public'));
 // We need to use sessions to keep track of our user's login status
 app.use(
   session({ secret: 'keyboard cat', resave: true, saveUninitialized: true })
@@ -37,21 +37,21 @@ require('./routes/passport_api_routes')(app);
 
 //SendGrid Email
 
-sgMail.setApiKey(process.env.SENDGRID_KEY);
-const msg = {
-  to: 'jlw00329@gmail.com', // Change to your recipient
-  from: 'jlw00329@gmail.com', // Change to your verified sender
-  subject: 'Sending with SendGrid is Fun',
-  text: 'and easy to do anywhere, even with Node.js',
-  html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-};
-sgMail.send(msg, (err, info) => {
-  if (err) {
-    console.log('Email not Sent');
-  } else {
-    console.log('Your Email was Sent');
-  }
-});
+// sgMail.setApiKey(process.env.SENDGRID_KEY);
+// const msg = {
+//   to: 'jlw00329@gmail.com', // Change to your recipient
+//   from: 'jlw00329@gmail.com', // Change to your verified sender
+//   subject: 'Sending with SendGrid is Fun',
+//   text: 'and easy to do anywhere, even with Node.js',
+//   html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+// };
+// sgMail.send(msg, (err, info) => {
+//   if (err) {
+//     console.log('Email not Sent');
+//   } else {
+//     console.log('Your Email was Sent');
+//   }
+// });
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(() => {

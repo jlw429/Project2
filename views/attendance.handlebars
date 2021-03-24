@@ -1,31 +1,61 @@
-{{!-- <h1>Attendance for {{dateFormat creation_date format="MMMM YYYY"}}</h1> --}}
-
-<script type="text/javascript" src="../js/attendance.js"></script>
-{{#each data}}
-{{classNum}}, {{className}}, {{teacher}}, {{percentage}}
-{{/each}}
-
-
-
-<p> Inside Attendance</p>
-
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">INSERT HANDLEBARS FOR TO EMAIL</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-primary">Send Email</button>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Send Email</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/send_email" method="POST">
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Recipient:</label>
+                        <input type="text" class="form-control" name="email" id="recipient-name" value="jlw00329@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject-name" class="col-form-label">Subject:</label>
+                        <input type="text" class="form-control" name="subject" id="subject-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Message:</label>
+                        <textarea class="form-control" name="message" id="message-text"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Send Email</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
+{{!-- <h1>Attendance for {{dateFormat creation_date format="MMMM YYYY"}}</h1> --}}
+
+{{!-- <script type="text/javascript" src="../js/attendance.js"></script> --}}
+<div>
+    {{#each data}}
+        <div>
+            <p>
+               Class: {{className}}  {{classNum}}
+            </p>
+            <p>
+                Instructor: 
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    
+                {{teacher}}
+                </button>
+            </p>
+            <p>
+                Attendance record: {{percentage}}
+            </p>
+        </div>
+    {{/each}}
 </div>
+
+{{!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    Modal
+                </button> --}}
+
+<p>Inside Attendance</p>
+
