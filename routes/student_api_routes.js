@@ -37,12 +37,14 @@ module.exports = (app) => {
   });
 
   // DELETE route for deleting posts
-  app.delete('/api/student/delete/:id', (req, res) => {
+  app.post('/api/student/delete/:id', (req, res) => {
     db.Student.destroy({
       where: {
         id: req.params.id,
       },
     }).then((stuPost) => res.json(stuPost));
+
+    return res.redirect('/student');
   });
 
   // PUT route for updating posts

@@ -17,27 +17,28 @@ const getAllStudents = (category) => {
 getAllStudents();
 
 
-//Deletes a student.
-const deletePost = (id) => {
-    fetch(`/api/posts/${id}`, {
-      method: 'DELETE',
+
+//updates student
+    const checkBox = document.getElementsByClassName('deleteCheckbox')
+    const deleteBtn = document.getElementById('updateButton');
+    checkBox.addEventListener('click', deleteBtn)
+    deleteBtn.addEventListener('click', handlePostDelete);
+
+const updateStudent = (post) => {
+    fetch('/api/student', {
+      method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
-    }).then(() => getPosts(postCategorySelect.value));
+      body: JSON.stringify(post),
+    })
+      .then(() => {
+        console.log('Attempting update to post');
+        window.location.href = '/student';
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
   };
-  // Delete button
-    const checkBox = document.getElementsByClassName('deleteCheckbox')
-    const deleteBtn = document.getElementById('deleteButton');
-    checkBox.addEventListener('click', deleteBtn)
-    deleteBtn.addEventListener('click', handlePostDelete);
-  
-     const handlePostDelete = (e) => {
-       const currentPost = JSON.parse(
-         e.target.parentElement.parentElement.dataset.post
-       );
-       deletePost(currentPost.id);
-     };
-  
-deletePost();
-handlePostDelete();
+
+
