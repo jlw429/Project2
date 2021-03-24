@@ -15,3 +15,4 @@ const getAllStudents = (category) => {
 };
 
 getAllStudents();
+

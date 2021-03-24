@@ -34,7 +34,7 @@
 
 {{!-- <script type="text/javascript" src="../js/attendance.js"></script> --}}
 <div>
-    {{#each data}}
+    {{!-- {{#each data}}
         <div>
             <p>
                Class: {{className}}  {{classNum}}
@@ -51,8 +51,29 @@
             </p>
         </div>
     {{/each}}
+</div> --}}
+<h1>Attendance for yesterday 3/24/2021</h1>
+{{#each data}}
+<table class="table table-striped">
+  <thead>
+    {{!-- <tr>
+      <th scope="col">Class Name</th>
+      <th scope="col">Class Number</th>
+      <th scope="col">Teacher</th>
+      <th scope="col">Daily Students in Class</th>
+    </tr> --}}
+  </thead>
+  <tbody>
+    <tr>
+        <th scope="row">{{className}}</th>
+        <td>{{classNum}}</td>
+      <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">{{teacher}}</button></td>
+      <td>{{percentage}}</td>
+      </tr>
+      </tbody>
+</table>
 </div>
-
+{{/each}}
 
 
 
