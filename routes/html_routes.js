@@ -1,3 +1,5 @@
+const sgMail = require('@sendgrid/mail');
+require('dotenv').config();
 const fetch = require('node-fetch');
 
 // Dependencies
@@ -26,7 +28,18 @@ module.exports = (app) => {
 
   //loads student page
   app.get('/student', (req, res) => {
-    res.render('student');
+    fetch(`http://localhost:8080/api/student`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // console.log('Success in getting posts:', data);
+        res.render('student', { data: data.stu });
+      })
+      .catch((error) => console.error('Error:', error));
   });
 
   //loads attendance page
@@ -39,8 +52,8 @@ module.exports = (app) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log('Success in getting posts:', data);
-        res.render('attendance', data);
+        // console.log('Success in getting posts:', data);
+        res.render('attendance', { data: data.att });
       })
       .catch((error) => console.error('Error:', error));
   });
@@ -48,5 +61,27 @@ module.exports = (app) => {
   //loads logout page
   app.get('/logout', (req, res) => {
     res.render('logout');
+  });
+
+  app.post('/send_email', (req, res) => {
+    console.log(req.body);
+    let recipient = req.body.email;
+    let message = req.body.message;
+    let subject = req.body.subject;
+    sgMail.setApiKey(process.env.SENDGRID_KEY);
+    const msg = {
+      to: recipient, // Change to your recipient
+      from: 'jlw00329@gmail.com', // Change to your verified sender
+      subject: subject,
+      text: message,
+    };
+    sgMail.send(msg, (err, info) => {
+      if (err) {
+        console.log('Email not Sent');
+      } else {
+        console.log('Your Email was Sent');
+      }
+    });
+    res.redirect('/attendance');
   });
 };

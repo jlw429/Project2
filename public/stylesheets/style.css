@@ -18,64 +18,65 @@ background-position: center;
 
 /* background styling for login.html */
 .background-1::before {
-    content: "";
-    background-image: url(../images/login-back.jpg);
-    background-size: 100% 100vh;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.75;
+  content: '';
+  background-image: url(../images/login-back.jpg);
+  background-size: 100% 100vh;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
 }
 
 /*background styling for signup.html */
 .background-2::before {
-    content: "";
-    background-image: url(../images/signup.jpg);
-    background-size: 100% 100vh;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.4;
+  content: '';
+  background-image: url(../images/signup.jpg);
+  background-size: 100% 100vh;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
 }
 
 /*body and html styling */
-body, html{
-height: 100%;
+body,
+html {
+  height: 100%;
 }
 
 /* Sign up here */
 .sign-here {
-font-size: 18px;
-font-family: 'Lobster', cursive;
-text-align: end;
+  font-size: 18px;
+  font-family: 'Lobster', cursive;
+  text-align: end;
 }
 
 /* sign up here word */
 .here-word {
-color: navy;
+  color: navy;
 }
 
 /* email and password words and boxes */
 .form-group {
-font-size: 18px;
-font-family: 'Lobster', cursive;
+  font-size: 18px;
+  font-family: 'Lobster', cursive;
 }
 
 /* login button */
-.btn{
-/* font-family: cursive; */
-display: block;
-max-width: 300px;
-margin: auto;
+.btn {
+  /* font-family: cursive; */
+  display: block;
+  max-width: 300px;
+  margin: auto;
 }
 
 /* background styling for index.html */
 .background-3::before {
-  content: "";
+  content: '';
   background-image: url(../images/index.jpg);
   background-size: 100% 100vh;
   position: absolute;
@@ -122,7 +123,7 @@ margin: auto;
 }
 
 /* styling for logout text */
-.log-out{
+.log-out {
   text-align: center;
   height: 100%;
   width: 100%;
@@ -135,7 +136,7 @@ margin: auto;
 
 /* background styling for logout.html */
 .background-4::before {
-  content: "";
+  content: '';
   background-image: url(../images/logout.jpg);
   background-size: 100% 100vh;
   position: absolute;
@@ -148,7 +149,7 @@ margin: auto;
 
 /* background styling for student.html */
 .background-5::before {
-  content: "";
+  content: '';
   background-image: url(../images/student.jpg);
   background-size: 100% 100vh;
   position: absolute;
@@ -167,10 +168,10 @@ margin: auto;
   font-size: 30px;
 }
 
-/* background styling for attendence.html */
+/* background styling for attendance.html */
 .background-6::before {
-  content: "";
-  background-image: url(../images/attendence.png);
+  content: '';
+  background-image: url(../images/attendance.png);
   background-size: 100% 100vh;
   position: absolute;
   top: 0px;
@@ -180,7 +181,7 @@ margin: auto;
   opacity: 0.3;
 }
 
-/* styling for header in navbar in attendence.html*/
+/* styling for header in navbar in attendance.html*/
 #color-me3 {
   color: rgb(236, 171, 145);
   padding: 14px 16px;
