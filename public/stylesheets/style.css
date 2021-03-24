@@ -171,14 +171,14 @@ html {
 /* background styling for attendance.html */
 .background-6::before {
   content: '';
-  background-image: url(../images/attendance.png);
+  background-image: url(../images/attendence.png);
   background-size: 100% 100vh;
   position: absolute;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 /* styling for header in navbar in attendance.html*/
@@ -193,4 +193,22 @@ html {
 td {
   width: 0.1%;
   white-space: nowrap;
+}
+
+.button-1 {
+  display: block;
+  max-width: 300px;
+  margin: auto;
+}
+
+.button-2 {
+  display: block;
+  max-width: 300px;
+  margin: auto;
+}
+
+.button-3 {
+  display: block;
+  max-width: 300px;
+  margin: auto;
 }

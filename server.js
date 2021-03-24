@@ -17,6 +17,32 @@ const exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
+app.use(express.static('public'));
+
+app.get('/', (req, res)=> {
+  res.render('index');
+});
+
+app.get('/signup', (req, res)=> {
+  res.render('signup');
+});
+
+app.get('/welcome', (req, res)=> {
+  res.render('welcome');
+});
+
+app.get('/logout', (req, res)=> {
+  res.render('logout');
+});
+
+app.get('/attendance', (req, res)=> {
+  res.render('attendance');
+});
+
+app.get('/student', (req, res)=> {
+  res.render('student');
+});
+
 // Creating express app
 
 app.use(express.json());

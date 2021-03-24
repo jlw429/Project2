@@ -1,3 +1,27 @@
+<head>
+    <title>GradeBook</title>
+    <link rel="shortcut icon" type="image/jpg" href="./images/GradeBook.jpeg">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"
+    />
+    <script src="https://kit.fontawesome.com/2962aa9add.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="background-5">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header topnav-center">
+            <a class="navbar-brand fas fa-user" href="/" id="color-me2"> Home </a>
+          <a class="navbar-brand fas fa-sign-out-alt" href="/logout" id="color-me2"> Logout </a>
+          <a class="navbar-brand fas fa-clipboard" href="/attendance" id="color-me2"> Attendance </a>
+        </div>
+      </div>
+    </nav>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -56,10 +80,13 @@
 </table>
 </div>
 {{/each}}
-
+<br>
 <!-- Default dropright button -->
+<div class="container">
+<div class="row">
+<div class="button-1">
 <div class="btn-group dropright">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-success btn-lg dropdown-toggle button-1 mx-auto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Add a Student
   </button>
 <form class="dropdown-menu p-4">
@@ -74,9 +101,16 @@
   <button type="submit" class="btn btn-primary">Send</button>
 </form>
 </div>
+</div>
+</div>
+</div>
+<br>
 {{!-- Update Student --}}
+<div class="container">
+<div class="row">
+<div class="button-2">
 <div class="btn-group dropright">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-warning btn-lg dropdown-toggle button-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Update Student
   </button>
 <form class="dropdown-menu p-4">
@@ -94,9 +128,16 @@
   <button type="submit" class="btn btn-primary">Send</button>
 </form>
 </div>
+</div>
+</div>
+</div>
+<br>
 {{!-- Delete Student --}}
+<div class="container">
+<div class="row">
+<div class="button-3">
 <div class="btn-group dropright">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Delete a Student
   </button>
 <form class="dropdown-menu p-4">
@@ -111,3 +152,8 @@
   <button type="submit" class="btn btn-primary" id="deleteButton">Send</button>
 </form>
 </div>
+</div>
+</div>
+</div>
+
+</body>
