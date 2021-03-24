@@ -1,3 +1,4 @@
+
 const getAllStudents = (category) => {
   fetch(`/api/student/`, {
     method: 'GET',
