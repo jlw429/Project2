@@ -28,7 +28,18 @@ module.exports = (app) => {
 
   //loads student page
   app.get('/student', (req, res) => {
-    res.render('student');
+    fetch(`http://localhost:8080/api/student`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // console.log('Success in getting posts:', data);
+        res.render('student', { data: data.stu });
+      })
+      .catch((error) => console.error('Error:', error));
   });
 
   //loads attendance page
@@ -56,7 +67,7 @@ module.exports = (app) => {
     console.log(req.body);
     let recipient = req.body.email;
     let message = req.body.message;
-    let subject = req.body.subject
+    let subject = req.body.subject;
     sgMail.setApiKey(process.env.SENDGRID_KEY);
     const msg = {
       to: recipient, // Change to your recipient
