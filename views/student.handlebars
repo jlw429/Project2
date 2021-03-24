@@ -34,18 +34,49 @@
 </div>
 
 <div>
-    {{#each data}}
-        <div>
-            <p>
-               Student Name: {{student_name}}  
-            </p>
-            <p>
-                
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                    
-                Main Teacher:{{teacher_main}}
-                </button>
-            </p>
-        </div>
-    {{/each}}
+   
+{{#each data}}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Update or Delete</th>
+      <th scope="col">Name</th>
+      <th scope="col">Teacher</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <th scope="row"><div class="checkbox">
+            <label><input type="checkbox" value=""></label>
+        </div></th>
+        <td>{{student_name}}</td>
+      <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">{{teacher_main}}</button></td>
+      </tr>
+      </tbody>
+</table>
+</div>
+{{/each}}
+
+<!-- Default dropright button -->
+<div class="btn-group dropright">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Add a Student
+  </button>
+<form class="dropdown-menu p-4">
+  <div class="form-group">
+    <label for="exampleDropdownFormEmail2">Email address</label>
+    <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+  </div>
+  <div class="form-group">
+    <label for="exampleDropdownFormPassword2">Password</label>
+    <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+    <label class="form-check-label" for="dropdownCheck2">
+      Remember me
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary">Sign in</button>
+</form>
 </div>

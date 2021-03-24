@@ -40,14 +40,14 @@ module.exports = (app) => {
   app.delete('/api/student/delete/:id', (req, res) => {
     db.Student.destroy({
       where: {
-        id: req.body.id,
+        id: req.params.id,
       },
     }).then((stuPost) => res.json(stuPost));
   });
 
   // PUT route for updating posts
   app.put('/api/student/update/:id', (req, res) => {
-    db.Student.update({
+    db.Student.update(req.body, {
       where: {
         id: req.body.id,
       },
