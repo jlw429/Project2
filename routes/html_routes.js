@@ -25,12 +25,15 @@ module.exports = (app) => {
 
   //loads student page
   app.get('/student', (req, res) => {
-    fetch(`http://localhost:8080/api/student`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
+    fetch(
+      `https://msu-project-two.herokuapp.com/api/student`,
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         // console.log('Success in getting posts:', data);
@@ -41,7 +44,7 @@ module.exports = (app) => {
 
   //loads attendance page
   app.get('/attendance', (req, res) => {
-    fetch(`http://localhost:8080/api/attendance`, {
+    fetch(`https://msu-project-two.herokuapp.com/attendance`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
