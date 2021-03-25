@@ -43,7 +43,6 @@ module.exports = (app) => {
         id: req.params.id,
       },
     }).then((stuPost) => res.json(stuPost));
-
     return res.redirect('/student');
   });
 

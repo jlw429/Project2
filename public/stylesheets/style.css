@@ -148,7 +148,7 @@ html {
 }
 
 /* background styling for student.html */
-.background-5::before {
+/* .background-5::before {
   content: '';
   background-image: url(../images/student.jpg);
   background-size: 100% 100vh;
@@ -158,7 +158,7 @@ html {
   bottom: 0px;
   left: 0px;
   opacity: 0.7;
-}
+} */
 
 /* styling for header in navbar in student.html */
 #color-me2 {
@@ -169,7 +169,7 @@ html {
 }
 
 /* background styling for attendance.html */
-.background-6::before {
+/* .background-6::before {
   content: '';
   background-image: url(../images/attendence.png);
   background-size: 100% 100vh;
@@ -178,7 +178,7 @@ html {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.4;
+  opacity: 0.4; */
 }
 
 /* styling for header in navbar in attendance.html*/
